@@ -8,6 +8,8 @@ zfs_pool_name="rpool"
 zfs_pool_disks=(
   "/dev/disk/by-id/ata-WDC_WD1001FALS-40Y6A0_WD-WCATR5292747"
   "/dev/disk/by-id/ata-MB1000EBNCF_WMAW30513290"
+  "/dev/disk/by-id/ata-WDC_WD1001FALS-40Y6A0_WD-WCATR5303746"
+  "/dev/disk/by-id/ata-MB1000EBNCF_WMAW30620227"
 )
 zfs_pool_type="mirror"            # use "" for single, or "mirror", "raidz1", etc.
 zfs_encrypt_home="false"    # only set to true if you are using a nixos ISO with ZFS 0.8 or higher.
