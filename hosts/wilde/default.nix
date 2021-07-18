@@ -4,6 +4,11 @@ imports = [];
 
   boot.kernelParams = [ "elevator=none" ];
 
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "us";
+  };
+
   environment.systemPackages = with pkgs; [
     curl
     dnsutils
@@ -17,13 +22,7 @@ imports = [];
     vim
   ];
 
-  i18n = {
-    console = {
-      font = "Lat2-Terminus16";
-      keyMap = "us";
-    };
-    defaultLocale = "en_US.UTF-8";
-  };
+  i18n.defaultLocale = "en_US.UTF-8";
 
   networking.hostName = "wilde";
 
