@@ -27,7 +27,12 @@ imports = [];
 
   programs.vim.defaultEditor = true;
 
-  services.openssh.enable = true;
+  services.openssh = {
+    passwordAuthentication = false;
+    enable = true;
+  };
+
+  sound.enable = false;
 
   system.autoUpgrade.enable = true;
 
