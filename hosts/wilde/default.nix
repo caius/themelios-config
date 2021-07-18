@@ -47,6 +47,8 @@ imports = [];
 
   time.timeZone = "UTC";
 
+  users.mutableUsers = false;
+
   users.users.caius = {
     isNormalUser = true;
     home = "/home/caius";
@@ -58,4 +60,6 @@ imports = [];
       "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCoihjFZOiiqQMzBZ7KQ6DSePM7YdtKwq8u6ZmZNR126I95TQ15B5cUedEcIWBEVbuGIQxkRH3yKicTjr8n9lW2qxGXvSDD2xIxBFRyeluVUtiYQTpCHFUeDMyrRr9jPSBXCghkgGOw6cEX59ia06PP1UV80V4oVINDHYlc4gJZyJwQ1LXfPvXaYUBLbWfm0f2cLOaUb+NqK8b175BHsLP+plUKBAZtAMJRtd4ydCnxYTDQOD9PExOL2bOpTShyy3QjhSGfIDKXxQGKr66efhrdQwli7KEPq2QsFeerRhtMScI9RHlwBdZpxHB5GtmkNaqhlCMJ8JRgxpN6YEejcsMqkdJ0sVGnVJhYlI2McbsOMwh5F5vCBz7YGS8vEtdCKRr7c2QRtRBkQk14klKD5vldGjjujOJjRZ+fjcT/dAop8XLeV7vmmkvnTMg1L3GIlYrDpKUa2HS5hSVH6cDuO1PU9EiNvQZAY4HY1hW8c9VQ007FogsHA7bnZkVtrAfyHLc= 2021-07-11-network"
     ];
   };
+
+  users.users.root.hashedPassword = "$6$6PMpCLdX.T3vKM$SqdJyWHRl.PAhmnEJNkE/ofOPZRibzqGACAg/5SVkXf9h95j9kmkjV81KCPeCdqj2.95tv67YmyFszJNQe99M.";
 }
