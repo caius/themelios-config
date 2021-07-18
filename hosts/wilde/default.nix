@@ -16,6 +16,17 @@ imports = [];
 
   services.openssh.enable = true;
 
+  system.autoUpgrade.enable = true;
+
+  systemd.services.nix-config-update = {
+    enable = true;
+    description = "Update contents of /nix-config"
+    serviceConfig.Type = "oneshot";
+    path = with pkgs; [ "git" ];
+    startAt = "06:03"
+    script = "git -C /nix-config pull --rebase";
+  };
+
   time.timeZone = "UTC";
 
   users.users.caius = {
