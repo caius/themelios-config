@@ -4,6 +4,19 @@ imports = [];
 
   boot.kernelParams = [ "elevator=none" ];
 
+  environment.systemPackages = with pkgs; [
+    "curl"
+    "dnsutils"
+    "gitMinimal"
+    "htop"
+    "iperf3"
+    "less"
+    "lsof"
+    "lz4"
+    "tcpdump"
+    "vim"
+  ]
+
   i18n = {
     consoleFont = "Lat2-Terminus16";
     consoleKeyMap = "us";
@@ -12,7 +25,7 @@ imports = [];
 
   networking.hostName = "wilde";
 
-  programs.mtr.enable = true;
+  programs.vim.defaultEditor = true;
 
   services.openssh.enable = true;
 
@@ -22,7 +35,7 @@ imports = [];
     enable = true;
     description = "Update contents of /nix-config"
     serviceConfig.Type = "oneshot";
-    path = with pkgs; [ "git" ];
+    path = with pkgs; [ "gitMinimal" ];
     startAt = "06:03"
     script = "git -C /nix-config pull --rebase";
   };
