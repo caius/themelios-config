@@ -54,7 +54,7 @@ imports = [];
     isNormalUser = true;
     home = "/home/caius";
     description = "Caius Durling";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "lxd" ];
     hashedPassword = "$6$NG7FtPB3PX4Xe$jruQNfJhlL65jYBWaV2K70hMMVDRMHZLGl6EUoopfN/GGzY.J.41X7EP3MTPk18hZvU6BCg5qcKpXHT2CWcMa0";
     openssh.authorizedKeys.keys = [
       "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDpBTlFRgaUitUv9tay7blPJ1pg4Ap1EJMudzgfZp+kT5U1ISumsy2/2Wz1CCHYDSkqoYHyr8j3q1El8DCMMKiA= 2021-07-08-caius-vulcan"
@@ -63,4 +63,9 @@ imports = [];
   };
 
   users.users.root.hashedPassword = "$6$6PMpCLdX.T3vKM$SqdJyWHRl.PAhmnEJNkE/ofOPZRibzqGACAg/5SVkXf9h95j9kmkjV81KCPeCdqj2.95tv67YmyFszJNQe99M.";
+
+  virtualisation.lxd = {
+    enable = true;
+    recommendedSysctlSettings = true;
+  };
 }
