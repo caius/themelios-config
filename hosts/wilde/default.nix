@@ -5,21 +5,23 @@ imports = [];
   boot.kernelParams = [ "elevator=none" ];
 
   environment.systemPackages = with pkgs; [
-    "curl"
-    "dnsutils"
-    "gitMinimal"
-    "htop"
-    "iperf3"
-    "less"
-    "lsof"
-    "lz4"
-    "tcpdump"
-    "vim"
+    curl
+    dnsutils
+    gitMinimal
+    htop
+    iperf3
+    less
+    lsof
+    lz4
+    tcpdump
+    vim
   ];
 
   i18n = {
-    consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "us";
+    console = {
+      font = "Lat2-Terminus16";
+      keyMap = "us";
+    };
     defaultLocale = "en_US.UTF-8";
   };
 
