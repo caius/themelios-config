@@ -15,7 +15,7 @@ imports = [];
     "lz4"
     "tcpdump"
     "vim"
-  ]
+  ];
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
@@ -38,10 +38,10 @@ imports = [];
 
   systemd.services.nix-config-update = {
     enable = true;
-    description = "Update contents of /nix-config"
+    description = "Update contents of /nix-config";
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ "gitMinimal" ];
-    startAt = "06:03"
+    startAt = "06:03";
     script = "git -C /nix-config pull --rebase";
   };
 
