@@ -10,7 +10,7 @@ imports = [];
     defaultLocale = "en_US.UTF-8";
   };
 
-  networking.hostName = "wilde.sr.int.durling.name";
+  networking.hostName = "wilde";
 
   programs.mtr.enable = true;
 
